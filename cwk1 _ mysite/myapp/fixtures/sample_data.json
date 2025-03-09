@@ -1,0 +1,164 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "alice",
+            "password": "pbkdf2_sha256$870000$228XqQ6QvkLkUcN2rOtwWS$3blSwkC+Angl2AUqexCxs6FaLitPG21UDzZeaBO3T5A=",
+            "email": "alice@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "username": "bob",
+            "password": "pbkdf2_sha256$870000$228XqQ6QvkLkUcN2rOtwWS$3blSwkC+Angl2AUqexCxs6FaLitPG21UDzZeaBO3T5A=",
+            "email": "bob@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "model": "myapp.professor",
+        "pk": "P1",
+        "fields": {
+            "name": "Dr. Smith"
+        }
+    },
+    {
+        "model": "myapp.professor",
+        "pk": "P2",
+        "fields": {
+            "name": "Dr. Doe"
+        }
+    },
+    {
+        "model": "myapp.module",
+        "pk": "MATH101",
+        "fields": {
+            "module_name": "Mathematics 101"
+        }
+    },
+    {
+        "model": "myapp.module",
+        "pk": "CS101",
+        "fields": {
+            "module_name": "Computer Science 101"
+        }
+    },
+    {
+        "model": "myapp.moduleinstance",
+        "pk": 1,
+        "fields": {
+            "module": "MATH101",
+            "year": 2023,
+            "semester": 1,
+            "professors": ["P1"]
+        }
+    },
+    {
+        "model": "myapp.moduleinstance",
+        "pk": 2,
+        "fields": {
+            "module": "CS101",
+            "year": 2023,
+            "semester": 2,
+            "professors": ["P2"]
+        }
+    },
+
+    {
+        "model": "myapp.professor",
+        "pk": "JE1",
+        "fields": {
+            "name": "Dr. John Doe"
+        }
+    },
+    {
+        "model": "myapp.professor",
+        "pk": "SM1",
+        "fields": {
+            "name": "Dr. Sarah Miller"
+        }
+    },
+    {
+        "model": "myapp.module",
+        "pk": "CD1",
+        "fields": {
+            "module_name": "Computer Development"
+        }
+    },
+    {
+        "model": "myapp.module",
+        "pk": "MT1",
+        "fields": {
+            "module_name": "Mathematics 101"
+        }
+    },
+    {
+        "model": "myapp.moduleinstance",
+        "pk": 3,
+        "fields": {
+            "module": "CD1",
+            "year": 2021,
+            "semester": 1,
+            "professors": ["JE1", "SM1"]
+        }
+    },
+    {
+        "model": "myapp.moduleinstance",
+        "pk": 4,
+        "fields": {
+            "module": "MT1",
+            "year": 2021,
+            "semester": 2,
+            "professors": ["SM1"]
+        }
+    },
+
+    {
+        "model": "myapp.rating",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "professor": "JE1",
+            "module_instance": 3,
+            "rating": 4
+        }
+    },
+    {
+        "model": "myapp.rating",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "professor": "JE1",
+            "module_instance": 3,
+            "rating": 5
+        }
+    },
+    {
+        "model": "myapp.rating",
+        "pk": 3,
+        "fields": {
+            "user": 1,
+            "professor": "SM1",
+            "module_instance": 3,
+            "rating": 3
+        }
+    },
+    {
+        "model": "myapp.rating",
+        "pk": 4,
+        "fields": {
+            "user": 2,
+            "professor": "SM1",
+            "module_instance": 4,
+            "rating": 4
+        }
+    }
+]
